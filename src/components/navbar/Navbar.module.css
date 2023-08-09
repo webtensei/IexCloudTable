@@ -1,0 +1,32 @@
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.headerLink{
+    text-decoration: none;
+    color: var(--accentColor);
+}
+.changeTheme{
+    background-color: inherit;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    vertical-align: center;
+    height: 49px;
+    width: 55px;
+    border-radius: 8px;
+}
+.changeTheme:hover{
+    background-color: var(--secondaryColor);
+    cursor: pointer;
+}
+.changeTheme > img{
+    fill: white;
+    height: 32px;
+}
+:root[data-theme='dark'] .changeTheme > img{
+    filter: invert(1);
+}

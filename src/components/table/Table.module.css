@@ -1,0 +1,26 @@
+.thead > tr > th{
+    padding: 0px 20px;
+}
+
+.table{
+    height: 100%;
+    width: 100%;
+}
+.symbol{
+width: 30%;
+}
+.open{
+    width: 10%;
+}
+.close{
+    width: 10%;
+}
+.lastClose{
+    width: 10%;
+}
+.closeTime{
+    width: 20%;
+}
+.volume{
+    width: 20%;
+}

@@ -1,0 +1,69 @@
+.layout{
+    color: var(--text-color);
+    background-color: var(--bgColor);
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1076px;
+    height: 100vh;
+    display: grid;
+    /*test*/
+    grid-gap: var(--Spacing) ;
+    grid-template:
+            "navigation navigation navigation navigation" 60px
+            "main main main util" minmax(300px, 80vh)
+            "selector selector pagination util" 30px
+            "foot foot foot foot" 100px/1fr 1fr 1fr 60px;
+}
+.navBar{
+    margin-top: 10px;
+    grid-area: navigation;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 8px;
+    padding: 0 0 0 var(--Spacing);
+}
+.content{
+    grid-area: main;
+    background-color: var(--primaryColor);
+    padding: var(--Spacing);
+    max-width: 80vw;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 4px;
+    box-shadow: -0.1em 0 .4em var(--accentColor);
+}
+.utilities{
+    grid-area: util;
+}
+.selector{
+    grid-area: selector;
+}
+.pagination{
+    grid-area: pagination;
+    text-align: end;
+}
+.footer{
+    line-height: 18px;
+    grid-area: foot;
+    padding: var(--Spacing);
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .layout{
+        grid-template:
+            "navigation navigation navigation navigation" 60px
+            "util util util util" 40px
+            "selector selector selector selector" 60px
+            "main main main main" minmax(300px, 80vh)
+            "pagination pagination pagination pagination" 30px
+            "foot foot foot foot" 100px/1fr 1fr 1fr 60px;
+    }
+    .pagination{
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1220px){
+    .content{
+        max-width: 100%;
+    }
+
+}
